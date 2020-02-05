@@ -6,8 +6,7 @@
              <persistence-unit name="Mysql_UP" transaction-type="RESOURCE_LOCAL">
              	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
              	
-             	<class>fr.eni.jpa.entity.User</class>
-             	<class>fr.eni.jpa.entity.Civilite</class>
+             	<exclude-unlisted-classes>false</exclude-unlisted-classes>
              	
              	<properties>
              		<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>

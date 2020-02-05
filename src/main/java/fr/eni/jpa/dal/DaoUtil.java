@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-public class DAOOutil {
+public class DaoUtil {
 	
 	private static EntityManagerFactory emf;
 	private static EntityManager em;
