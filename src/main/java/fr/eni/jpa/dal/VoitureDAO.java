@@ -71,9 +71,4 @@ public class VoitureDAO {
 		return DaoUtil.getEm().createQuery(request, Voiture.class).getResultList();
 	}
 	
-	
-	public List<Voiture> findByDISCR(String disc) {
-		String request = "select Object(u) from Voiture u where DISCR = :var";
-		return DaoUtil.getEm().createQuery(request, Voiture.class).setParameter("var", disc).getResultList();
-	}
 }

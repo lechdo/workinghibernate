@@ -35,10 +35,6 @@ public class TestVoiture {
 			List<Voiture> voituresCourse = vdao.findVoituresCourse();
 			System.out.println(voituresCourse);
 
-			System.out.println("Les voitures DISCR B : ");
-			List<Voiture> voituresDB = vdao.findByDISCR("B");
-			System.out.println(voituresDB);
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

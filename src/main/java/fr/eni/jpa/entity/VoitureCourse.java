@@ -2,10 +2,11 @@ package fr.eni.jpa.entity;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @SuppressWarnings("serial")
 @Entity
-@DiscriminatorValue("C")
+@Table(name= "table_per_class_VoitureCourse")
 public class VoitureCourse extends Voiture {
 
 	private String ecurie;

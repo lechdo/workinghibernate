@@ -14,14 +14,13 @@ import javax.persistence.Table;
 
 @SuppressWarnings("serial")
 @Entity
-@Table(name = "SingleVoiture")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "DISCR")
-@DiscriminatorValue("V")
+@Table(name = "Table_per_class_Voiture")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Voiture implements Serializable {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	// type de génération des ids
+	@GeneratedValue(strategy = GenerationType.TABLE)
 	private int id;
 
 	private String marque;
