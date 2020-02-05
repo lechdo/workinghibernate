@@ -1,38 +1,23 @@
 package fr.eni.jpa.entity;
 
-import java.io.Serializable;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 
-@SuppressWarnings("serial")
 @Entity
-@Table(name = "PERSONNES_M2O")
-public class User implements Serializable {
-
+public class User {
+	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-
-	private String nom;
-	private String prenom;
-
-	@ManyToOne
-	private Civilite civilite;
-
-	public User(String nom, String prenom, Civilite civilite) {
+	private String login;
+	private String password;
+	
+	public User(int id, String login, String password) {
 		super();
-		this.nom = nom;
-		this.prenom = prenom;
-		this.civilite = civilite;
-	}
-
-	public User() {
-		super();
+		this.id = id;
+		this.login = login;
+		this.password = password;
 	}
 
 	public int getId() {
@@ -43,28 +28,20 @@ public class User implements Serializable {
 		this.id = id;
 	}
 
-	public String getNom() {
-		return nom;
+	public String getLogin() {
+		return login;
 	}
 
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
-	public String getPrenom() {
-		return prenom;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
-
-	public Civilite getCivilite() {
-		return civilite;
-	}
-
-	public void setCivilite(Civilite civilite) {
-		this.civilite = civilite;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	@Override
@@ -72,14 +49,14 @@ public class User implements Serializable {
 		StringBuilder builder = new StringBuilder();
 		builder.append("User [id=");
 		builder.append(id);
-		builder.append(", nom=");
-		builder.append(nom);
-		builder.append(", prenom=");
-		builder.append(prenom);
-		builder.append(", civilite=");
-		builder.append(civilite);
+		builder.append(", login=");
+		builder.append(login);
+		builder.append(", password=");
+		builder.append(password);
 		builder.append("]");
 		return builder.toString();
 	}
+	
+	
 
 }
